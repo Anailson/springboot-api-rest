@@ -1,0 +1,11 @@
+package med.voll.api.endereco;
+
+public record DadosEndereco(String logradouro, String bairro, String cep, String cidade, String uf,
+                            String complemento, String numero) {
+}
+
+
+/**
+ * Consulta sobre a utilização do record no java
+ * https://www.guiadojava.com.br/2021/04/java-records.html
+ */
