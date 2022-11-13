@@ -15,6 +15,9 @@ public record dadosCadastroMedico(
         @NotBlank
         @Email
         String email,
+
+        @NotBlank
+        String telefone,
         @NotBlank
         @Pattern(regexp = "\\d{4,6}") //Expressão regular que valida o CRM de 4 a 6 digitos
         String crm,
@@ -27,4 +30,8 @@ public record dadosCadastroMedico(
 
 /**
  * https://medium.com/experiencecode/usando-records-em-java-9afecf7495b3
+ */
+
+/**Validação
+ * https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html#builtinconstraints
  */
