@@ -10,6 +10,7 @@ import javax.validation.constraints.Pattern;
 
 public record dadosCadastroMedico(
 
+        Long id,
         @NotBlank
         String nome,
         @NotBlank
