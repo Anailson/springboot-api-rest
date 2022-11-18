@@ -31,6 +31,18 @@ public class Endereco {
 
     }
 
+    //paciente
+    public Endereco(med.voll.api.paciente.DadosEndereco endereco) {
+        this.logradouro = endereco.logradouro();
+        this.bairro = endereco.bairro();
+        this.cep = endereco.cep();
+        this.numero = endereco.numero();
+        this.complemento = endereco.complemento();
+        this.cidade = endereco.cidade();
+        this.uf = endereco.uf();
+
+    }
+
     public void atualizarInformacoes(DadosEndereco dados) {
         if (dados.logradouro() != null) {
             this.logradouro = dados.logradouro();
