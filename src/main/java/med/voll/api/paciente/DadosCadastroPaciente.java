@@ -1,4 +1,25 @@
 package med.voll.api.paciente;
 
-public record DadosCadastroPaciente(String nome, String email, String telefone, String cpf, DadosEndereco endereco  ) {
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+public record DadosCadastroPaciente(
+
+
+        @NotBlank
+        String nome,
+         @NotBlank
+         @Email
+        String email,
+        @NotBlank
+        String telefone,
+        @NotBlank
+        String cpf,
+        DadosEndereco endereco  ) {
 }
+
+/*
+Todas as informações são de preenchimento obrigatório, exceto o número e o complemento do endereço.
+ */
