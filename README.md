@@ -18,3 +18,9 @@ MySQL
 Hibernate
 Flyway
 Lombok
+
+📝 Licença 
+Projeto desenvolvido por Alura e utilizado nos cursos de Spring Boot.
+
+Instrutor: Rodrigo Ferreira
+Aluno: Anailson Ribeiro
