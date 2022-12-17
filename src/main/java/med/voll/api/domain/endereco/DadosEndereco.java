@@ -1,15 +1,16 @@
-package med.voll.api.paciente;
+package med.voll.api.domain.endereco;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public record DadosEndereco(
+
         @NotBlank
         String logradouro,
         @NotBlank
         String bairro,
         @NotBlank
-        @Pattern(regexp = "\\d{8}")
+        @Pattern(regexp = "\\d{8}")//Expressão regular Cep com 8 digitos
         String cep,
         @NotBlank
         String cidade,
@@ -19,7 +20,10 @@ public record DadosEndereco(
         String numero) {
 }
 
+
 /**
- * dados que NÃO obrigatorio
- *  o número e o complemento do endereço.
+ * Consulta sobre a utilização do record no java
+ * https://www.guiadojava.com.br/2021/04/java-records.html
+ * https://docs.oracle.com/en/java/javase/16/language/records.html
+ * o RECORD É SIMILAR AO DTO. PORÉM COM MENOS ATRIBUTOS
  */

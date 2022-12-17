@@ -1,4 +1,4 @@
-package med.voll.api.endereco;
+package med.voll.api.domain.endereco;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,7 +32,7 @@ public class Endereco {
     }
 
     //paciente
-    public Endereco(med.voll.api.paciente.DadosEndereco endereco) {
+    public Endereco(med.voll.api.domain.paciente.DadosEndereco endereco) {
         this.logradouro = endereco.logradouro();
         this.bairro = endereco.bairro();
         this.cep = endereco.cep();
