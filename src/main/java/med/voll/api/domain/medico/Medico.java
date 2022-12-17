@@ -30,7 +30,7 @@ public class Medico {
     private Endereco endereco;
 
 
-    public Medico(dadosCadastroMedico dados) {
+    public Medico(DadosCadastroMedico dados) {
         this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();

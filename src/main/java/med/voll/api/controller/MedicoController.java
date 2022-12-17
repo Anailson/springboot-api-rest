@@ -1,7 +1,6 @@
 package med.voll.api.controller;
 
 import med.voll.api.domain.medico.*;
-import med.voll.api.domain.medico.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +22,7 @@ public class MedicoController {
 
 	@PostMapping()
 	@Transactional
-	public ResponseEntity cadastrar(@RequestBody @Valid dadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
 		var medico = new Medico(dados);
 		repository.save(medico);
 
