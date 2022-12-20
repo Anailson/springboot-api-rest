@@ -26,7 +26,7 @@ public class AutenticacaoController {
         var token = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
         var authenticaion = manager.authenticate(token);
 
-        return  ResponseEntity.ok().build();
+        return  ResponseEntity.ok("");
 
     }
 }
