@@ -26,7 +26,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
-       // System.out.println("FILTRO CHAMADO!!");
+         System.out.println("FILTRO CHAMADO!!");
         //lógica para recuperar o TOKEN
         var tokenJWT = recuperarToken(request);
 
@@ -37,8 +37,9 @@ public class SecurityFilter extends OncePerRequestFilter {
 
             var authentication = new UsernamePasswordAuthenticationToken(usuario, null, usuario.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authentication);
+            System.out.println("Logado na requisição");
         }
-        
+
         filterChain.doFilter(request,response);
 
     }
