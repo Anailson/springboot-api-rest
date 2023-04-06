@@ -1,5 +1,7 @@
 package med.voll.api.domain.consulta;
 
+import med.voll.api.domain.medico.Especialidade;
+
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
@@ -14,6 +16,8 @@ public record DadosAgendamentoConsulta(
 
         @NotNull
         @Future //data no futuro
-        LocalDateTime data) {
+        LocalDateTime data,
+
+        Especialidade especialidade) {
 
 }
