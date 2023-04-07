@@ -23,7 +23,7 @@ public class AgendaDeConsultas {
 
         //Ser não tem paciente com id (não cadastrado)
         if(!pacienteRepository.existsById(dados.idPaciente())){
-                throw  new ValidacaoException("Id do paciente informado não existe!!");
+            throw  new ValidacaoException("Id do paciente informado não existe!!");
         }
 
         if(dados.idMedico() != null && !medicoRepository.existsById(dados.idMedico())){

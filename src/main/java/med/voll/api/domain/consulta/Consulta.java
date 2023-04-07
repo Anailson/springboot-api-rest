@@ -31,4 +31,6 @@ public class Consulta {
     private Paciente paciente;
 
     private LocalDateTime data;
+
+
 }

@@ -12,23 +12,23 @@ public record DadosCadastroMedico(
 
         Long id,
 
-        //Exemplo de validação: @NotBlank(message = "Nome é obrigatório") -
+//Exemplo de validação: @NotBlank(message = "Nome é obrigatório") -
 
-        @NotBlank(message = "{nome.obrigatorio}")
+@NotBlank(message = "{nome.obrigatorio}")
         String nome,
-        @NotBlank(message = "{email.obrigatorio}")
-        @Email(message = "{email.invalido}")
+@NotBlank(message = "{email.obrigatorio}")
+@Email(message = "{email.invalido}")
         String email,
 
-        @NotBlank(message = "{telefone.obrigatorio}")
+@NotBlank(message = "{telefone.obrigatorio}")
         String telefone,
-        @NotBlank(message = "{crm.obrigatorio}")
-        @Pattern(regexp = "\\d{4,6}") //Expressão regular que valida o CRM de 4 a 6 digitos
+@NotBlank(message = "{crm.obrigatorio}")
+@Pattern(regexp = "\\d{4,6}") //Expressão regular que valida o CRM de 4 a 6 digitos
         String crm,
-        @NotNull(message = "{especialidade.obrigatoria}")
+@NotNull(message = "{especialidade.obrigatoria}")
         Especialidade especialidade,
-        @NotNull(message = "{endereco.obrigatorio}")
-        @Valid DadosEndereco endereco ) {}
+@NotNull(message = "{endereco.obrigatorio}")
+@Valid DadosEndereco endereco ) {}
 
 /**
  * https://medium.com/experiencecode/usando-records-em-java-9afecf7495b3
