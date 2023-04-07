@@ -7,3 +7,19 @@ usuario: anailson.ribeiro@voll.med
 senha:123456
 insert into usuarios values(1,'anailson.ribeiro@voll.med',
 '$2a$10$Y50UaMFOxteibQEYLrwuHeehHYfcoafCopUazP12.rqB41bsolF5.');
+
+/** incluindo order e limit 1 da erro
+ * select m from Medico m
+ *             where
+ *             m.ativo = 1
+ *             and
+ *             m.especialidade = :especialidade
+ *             and
+ *             m.id not in(
+ *                 select c.medico.id from Consulta c
+ *                 where
+ *                 c.data = :data
+ *               )
+ *             order by rand()
+ *             limit 1
+ * /
